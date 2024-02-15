@@ -89,5 +89,14 @@ update_counter:
   beq $t8, $t4, reset_sum
   addi $t6, $t6, 1    
   j continue_loop
+
+reset_sum:
+  li $t7, 0          
+  j continue_loop
+
+print_output:
+  li $v0, 4
+  la $a0, nl
+  syscall
   
   
