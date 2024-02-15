@@ -98,5 +98,13 @@ print_output:
   li $v0, 4
   la $a0, nl
   syscall
+
+  jr $ra              
+process_substring:
+  addi $sp, $sp, -4
+  sw $ra, 0($sp)
+  move $s0, $a0       
+  li $t6, 0           
+  li $t8, 0           
   
   
