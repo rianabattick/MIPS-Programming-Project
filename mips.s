@@ -80,5 +80,10 @@ print_delimiter:
   move $a0, $t9
   syscall
 
+continue_loop:
+  addi $s0, $s0, 1   
+  bgtz $t6, update_counter
+  b continue_loop
+
   
   
