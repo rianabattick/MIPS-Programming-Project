@@ -130,5 +130,12 @@ is_upper_sub:
 calculate_sum_sub:
   add $t6, $t6, $t8   
   j continue_loop_sub
+
+continue_loop_sub:
+  addi $s0, $s0, 1   
+  j loop_substring
+  
+end_substring:
+  lw $ra, 0($sp)
   
   
