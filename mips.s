@@ -21,4 +21,13 @@ process_whole_string:
   li $t4, 47
   li $t5, 32
   li $t6, 0
-  li $t7, 9
+  li $t7, 0
+
+loop_whole_string
+  lb $t8, ($s0)
+  beq $t8, $zero, print_output
+  beq $t8, $t4, process_substring
+  ble $t0, $t8, is_num_or_letter
+  j continue_loop
+  
+  
