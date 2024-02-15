@@ -60,5 +60,13 @@ process_substring:
     syscall
     j continue_loop
 
+print_delimiter:
+  li $v0, 4
+  la $a0, space
+  syscall
+  li $v0, 4
+  la $a0, space
+  syscall
+
   
   
