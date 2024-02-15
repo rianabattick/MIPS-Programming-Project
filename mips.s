@@ -39,5 +39,13 @@ is_lower:
   sub $t8, $t8, $t1
   addi $t8, $t8, 10
   j calculate_sum
+
+is_upper:
+  sub $t8, $t8, $t2
+  addi $t8, $t8, 10
+
+calculate_sum:
+  add $t7, $t7, $t8
+  j continue_loop
   
   
