@@ -112,5 +112,15 @@ loop_substring:
   beq $t8, $zero, end_substring
   ble $t0, $t8, is_num_or_letter_sub
   j continue_loop_sub
+
+is_num_or_letter_sub:
+  bge $t8, $t1, is_lower_sub
+  j continue_loop_sub
+  
+is_lower_sub:
+  bge $t8, $t2, is_upper_sub
+  sub $t8, $t8, $t1   
+  addi $t8, $t8, 10  
+  j calculate_sum_sub
   
   
