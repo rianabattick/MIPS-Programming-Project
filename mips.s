@@ -49,16 +49,16 @@ calculate_sum:
   j continue_loop
 
 process_substring:
-    move $a0, $s0
-    jal process_substring
+  move $a0, $s0
+  jal process_substring
 
-    move $t9, $v0
+  move $t9, $v0
 
-    bgt $t6, $zero, print_delimiter
-    li $v0, 1
-    move $a0, $t9
-    syscall
-    j continue_loop
+  bgt $t6, $zero, print_delimiter
+  li $v0, 1
+  move $a0, $t9
+  syscall
+  j continue_loop
 
 print_delimiter:
   li $v0, 4
@@ -66,6 +66,18 @@ print_delimiter:
   syscall
   li $v0, 4
   la $a0, space
+  syscall
+
+  li $v0, 4
+  la $a0, slash
+  syscall
+  
+  li $v0, 4
+  la $a0, space
+  syscall
+  
+  li $v0, 1
+  move $a0, $t9
   syscall
 
   
