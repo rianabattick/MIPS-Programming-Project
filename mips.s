@@ -137,5 +137,8 @@ continue_loop_sub:
   
 end_substring:
   lw $ra, 0($sp)
+  addi $sp, $sp, 4
+  move $v0, $t6       
+  jr $ra
   
   
