@@ -47,5 +47,18 @@ is_upper:
 calculate_sum:
   add $t7, $t7, $t8
   j continue_loop
+
+process_substring:
+    move $a0, $s0
+    jal process_substring
+
+    move $t9, $v0
+
+    bgt $t6, $zero, print_delimiter
+    li $v0, 1
+    move $a0, $t9
+    syscall
+    j continue_loop
+
   
   
