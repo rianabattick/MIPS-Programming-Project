@@ -8,3 +8,12 @@ main:
 
   li $v0, 10
   syscall
+
+process_whole_string:
+  move $s0, $a0
+
+  li $s1, 26
+  li $s2, 0
+  li $t0, 10
+  li $t1, 97
+  li $t2, 65
