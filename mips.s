@@ -17,3 +17,8 @@ process_whole_string:
   li $t0, 10
   li $t1, 97
   li $t2, 65
+  li $t3, 58
+  li $t4, 47
+  li $t5, 32
+  li $t6, 0
+  li $t7, 9
