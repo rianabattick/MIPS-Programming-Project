@@ -122,5 +122,13 @@ is_lower_sub:
   sub $t8, $t8, $t1   
   addi $t8, $t8, 10  
   j calculate_sum_sub
+
+is_upper_sub:
+  sub $t8, $t8, $t2   
+  addi $t8, $t8, 10   
+  
+calculate_sum_sub:
+  add $t6, $t6, $t8   
+  j continue_loop_sub
   
   
