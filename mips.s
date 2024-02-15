@@ -106,5 +106,11 @@ process_substring:
   move $s0, $a0       
   li $t6, 0           
   li $t8, 0           
+
+loop_substring:
+  lb $t8, ($s0)       
+  beq $t8, $zero, end_substring
+  ble $t0, $t8, is_num_or_letter_sub
+  j continue_loop_sub
   
   
