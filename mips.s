@@ -85,5 +85,9 @@ continue_loop:
   bgtz $t6, update_counter
   b continue_loop
 
+update_counter:
+  beq $t8, $t4, reset_sum
+  addi $t6, $t6, 1    
+  j continue_loop
   
   
